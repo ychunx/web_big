@@ -13,7 +13,6 @@ $(function() {
 
   // 从 layui 中获取 form 对象
   var form = layui.form
-  var layer = layui.layer
   // 通过 form.verify() 函数自定义校验规则
   form.verify({
     // 自定义了一个叫做 pwd 校验规则
@@ -24,6 +23,7 @@ $(function() {
       // 还需要拿到密码框中的内容
       // 然后进行一次等于的判断
       // 如果判断失败,则return一个提示消息即可
+      //[] 为属性选择
       var pwd = $('.reg-box [name=password]').val()
       if (pwd !== value) {
         return '两次密码不一致！'
@@ -31,6 +31,7 @@ $(function() {
     }
   })
 
+  var layer = layui.layer
   // 监听注册表单的提交事件
   $('#form_reg').on('submit', function(e) {
     // 1. 阻止默认的提交行为

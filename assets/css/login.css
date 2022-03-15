@@ -8,6 +8,10 @@ body {
   background-size: cover;
 }
 
+.layui-main {
+  padding-top: 30px;
+}
+
 .loginAndRegBox {
   width: 400px;
   height: 310px;
@@ -16,6 +20,7 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 12px;
 }
 
 .title-box {
